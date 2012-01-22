@@ -1,6 +1,6 @@
- #include "WPILib.h"
- #include "Math.h"
-
+#include "WPILib.h"
+#include "Math.h"
+#include <vector>
 
 class Team3324 : public SimpleRobot
 {
@@ -71,7 +71,7 @@ public:
 			//We use this to turn the target in one direction or another, or keep it still if it is within, say 5px of centered.
 			//Next, we calculate the distance to the backboard using our image processing, and we feed this in to our launcher speed.
 			
-			float[] imgData = imgProcessing();
+			vector<float> imgData = imgProcessing();
 			
 			if( imgData[0] > 5 ){
 
